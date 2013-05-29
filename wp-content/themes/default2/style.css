@@ -1,0 +1,804 @@
+/*  
+Theme Name: academicproductivity.com
+Theme URI: http://academicproductivity.com/blog
+Description: adapted from the kubrick default template
+Version: 1.0
+Author: Dario Taraborelli
+Author URI: http://dartar.free.fr
+
+Changelog:
+2009-05-03
+- Related posts styling
+2008-01-22
+- DT added default styling for input and textarea elements
+- DT fixed stying for serch form
+2007-09-21
+- DT added gradient background
+2006-10-30
+- DT minor modifications to citations style
+- DT moved citations style to top for better traceability;
+- DT added CSS changelog
+2006-10-29
+- JQ added styles for academic citations ;
+*/
+
+/* Academic citations plugin */
+
+div.view_citations_link {
+        color: #06C;
+        font-size: 90%;
+        font-weight: normal;
+}
+
+div.hide_citations_link {
+        color: #06C;
+        font-size: 90%;
+        font-weight: normal;
+}
+
+div.citation_box {
+        background-color: #f8f8f8;
+        border: 1px solid #ddd;
+        padding: 6px;
+}
+
+div.citation_entry {
+        text-align: left;
+        margin-left: 2em;
+        text-indent: -2em;
+        padding: 0px 0px 6px 0px;
+        color: #333;
+        font-size: 80%;
+}
+
+.citation_hdrtxt {
+        font-size: 80%;
+        font-weight: bold;
+        color: #333;
+}
+
+
+
+/* Begin Typography & Colors */
+body {
+	font-size: 70.5%;
+	font-family: Georgia, 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	/* background-color: #d5d6d7; */
+	background: url("images/bkg.gif") fixed top;
+	color: #333;
+	text-align: center;
+	}
+
+#page {
+	background-color: white;
+	text-align: left;
+	}
+
+#header {
+	background-color: #73a0c5;
+/*	border-bottom: 10px solid #73a0c5; */
+	}
+
+#content {
+	font-size: 1.2em
+	}
+
+.linkcontent {
+	padding: 1em 0 0 0;
+	line-height: 1.4em;
+}
+
+.widecolumn .entry p {
+	font-size: 1.05em;
+	}
+
+.narrowcolumn .entry, .widecolumn .entry {
+	line-height: 1.4em;
+	}
+
+.widecolumn {
+	line-height: 1.6em;
+	}
+	
+.narrowcolumn .postmetadata {
+	text-align: center;
+	}
+
+.alt {
+	background-color: #f8f8f8;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	}
+
+#recentphoto img {
+    padding:4px;
+    border:1px solid #999;
+    margin:4px;
+}
+
+small {
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 0.9em;
+	line-height: 1.5em;
+	}
+
+h1, h2, h3, .sans {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	font-weight: bold;
+	}
+
+h1 {
+	font-size: 4em;
+	text-align: center;
+	}
+
+.description {
+	font-size: 1.2em;
+	text-align: center;
+	}
+
+h2 {
+	font-size: 1.4em;
+	}
+
+h2.pagetitle {
+	font-size: 1.4em;
+	}
+
+#sidebar h2 {
+	font-family: 'Lucida Grande', Verdana, Sans-Serif;
+	font-size: 1.2em;
+	}
+
+h3 {
+	font-size: 1.3em;
+	}
+
+h1, h1 a, h1 a:hover, h1 a:visited, .description {
+	text-decoration: none;
+	color: white;
+	}
+
+h2, h3
+{
+	color: #333;
+}
+
+h2 a, h2 a:visited, h3 a, h3 a:visited {
+	color: #06A;
+}
+
+h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, #sidebar h2, #wp-calendar caption, cite {
+	text-decoration: none;
+	text-align: left;
+	}
+
+.entry p a:visited {
+	color: #b85b5a;
+	}
+
+.commentlist li, #commentform input, #commentform textarea {
+	font: 0.9em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+	
+.commentlist li {
+	font-weight: bold;
+	}
+
+.commentlist cite, .commentlist cite a {
+	font-weight: bold;
+	font-style: normal;
+	font-size: 1.1em;
+	}
+
+.commentlist p {
+	font-weight: normal;
+	line-height: 1.5em;
+	text-transform: none;
+	}
+
+#commentform p {
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+.commentmetadata {
+	font-weight: normal;
+	}
+
+#sidebar {
+	font: 1em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+small, #sidebar ul ul li, #sidebar ul ol li, .nocomments, .postmetadata, blockquote, strike {
+	color: #777;
+	}
+	
+code {
+	font: 1.1em 'Courier New', Courier, Fixed;
+	}
+
+acronym, abbr, span.caps
+{
+	font-size: 0.9em;
+	letter-spacing: .07em;
+	}
+
+h2 a:hover, h3 a:hover {
+	color: #333;
+	text-decoration: none;
+}
+
+a {
+	color: #06A;
+	text-decoration: none;
+	}
+
+a:hover {
+	color: #06A;
+	text-decoration: underline;
+	}
+	
+#wp-calendar #prev a {
+	font-size: 9pt;
+	}
+
+#wp-calendar a {
+	text-decoration: none;
+	}
+
+#wp-calendar caption {
+	font: bold 1.3em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	text-align: center;
+	}
+
+#wp-calendar th {
+	font-style: normal;
+	text-transform: capitalize;
+	}
+/* End Typography & Colors */
+
+
+
+/* Begin Structure */
+body {
+	margin: 0;
+	padding: 0; 
+	}
+
+#page {
+	background-color: white;
+	margin: 0 auto;
+	padding: 0;
+	width: 760px;
+	border: 1px solid #959596;
+	}
+	
+#header {
+	padding: 0;
+	margin: 0 auto;
+	height: 200px;
+	width: 100%;
+	background-color: #73a0c5;
+	}
+
+#headerimg {
+	margin: 0;
+	height: 200px;
+	width: 100%;
+	}
+
+.narrowcolumn {
+	float: left;
+	padding: 0 0 20px 45px;
+	margin: 0px 0 0;
+	width: 450px;
+	}
+
+.widecolumn {
+	padding: 10px 0 20px 0;
+	margin: 5px 0 0 150px;
+	width: 450px;
+	}
+	
+.post {
+	margin: 0 0 40px;
+	text-align: justify;
+	width: 450px;
+	overflow: hidden;
+	}
+
+.widecolumn .post {
+	margin: 0;
+	}
+
+.narrowcolumn .postmetadata {
+	padding-top: 5px;
+	}
+
+.widecolumn .postmetadata {
+	margin: 30px 0;
+	}
+	
+#footer {
+	padding: 0 0 0 1px;
+	margin: 0 auto;
+	width: 760px;
+	clear: both;
+	}
+
+#footer p {
+	margin: 0;
+	padding: 20px 0;
+	text-align: center;
+	}
+/* End Structure */
+
+
+
+/*	Begin Headers */
+h1 {
+	padding: 145px 10px 0 0;
+	margin: 0;
+	text-align: right;
+	font-size: 24pt;
+}
+
+.description {
+	display: none;
+	text-align: center;
+	}
+
+h2 {
+	margin: 30px 0 0;
+	}
+
+h2.pagetitle {
+	margin-top: 30px;
+	text-align: center;
+}
+
+#sidebar h2 {
+	margin: 5px 0 0;
+	padding: 0;
+	}
+
+h3 {
+	padding: 0;
+	margin: 30px 0 0;
+	}
+
+h3.comments {
+	padding: 0;
+	margin: 40px auto 20px ;
+	}
+/* End Headers */
+
+
+
+/* Begin Images */
+p img {
+	padding: 0;
+	}
+
+/*	Using 'class="alignright"' on an image will (who would've
+	thought?!) align the image to the right. And using 'class="centered',
+	will of course center the image. This is much better than using
+	align="center", being much more futureproof (and valid) */
+	
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+	}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+	}
+
+.alignright {
+	float: right;
+	}
+	
+.alignleft {
+	float: left
+	}
+/* End Images */
+
+
+
+/* Begin Lists
+
+	Special stylized non-IE bullets
+	Do not work in Internet Explorer, which merely default to normal bullets. */
+
+html>body .entry ul {
+	margin-left: 0px;
+	padding: 0 0 0 30px;
+	list-style: none;
+	padding-left: 10px;
+	text-indent: -10px;
+	} 
+
+html>body .entry li {
+	margin: 7px 0 8px 10px;
+	}
+
+.entry ul li:before, #sidebar ul ul li:before {
+	content: "\00BB \0020";
+	}
+
+.entry ol {
+	padding: 0 0 0 35px;
+	margin: 0;
+	}
+
+.entry ol li {
+	margin: 0;
+	padding: 0;
+	}
+
+.postmetadata ul, .postmetadata li {
+	display: inline;
+	list-style-type: none;
+	list-style-image: none;
+	}
+	
+#sidebar ul, #sidebar ul ol {
+	margin: 0;
+	padding: 0;
+	}
+
+#sidebar ul li {
+	list-style-type: none;
+	list-style-image: none;
+	margin-bottom: 15px;
+	}
+
+#sidebar ul p, #sidebar ul select {
+	margin: 5px 0 8px;
+	}
+
+#sidebar ul ul, #sidebar ul ol {
+	margin: 5px 0 0 10px;
+	}
+
+#sidebar ul ul ul, #sidebar ul ol {
+	margin: 0 0 0 10px;
+	}
+
+ol li, #sidebar ul ol li {
+	list-style: decimal outside;
+	}
+
+#sidebar ul ul li, #sidebar ul ol li {
+	margin: 3px 0 0;
+	padding: 0;
+	}
+/* End Entry Lists */
+
+
+
+/* Begin Form Elements */
+
+textarea {
+	border: 1px solid #CCC;	
+}
+
+textarea:hover {
+	background-color: #F3F3F3;
+}
+
+textarea:focus {
+	background-color: #E6E6FF;
+}
+
+input[type=text] {
+	border: 1px solid #CCC;	
+}
+
+input:hover[type=text] {
+	background-color: #F3F3F3;
+}
+
+input:focus[type=text] {
+	background-color: #E6E6FF;
+}
+
+#searchform {
+	margin: 10px auto;
+	padding: 5px 3px; 
+	text-align: left;
+	}
+
+#sidebar #searchform #s {
+	width: 100px;
+	padding: 2px;
+	margin: 0px;
+	}
+
+#sidebar #searchform input[type="submit"] {
+	margin: 4px 0;
+	padding: 1px;
+}
+
+.entry form { /* This is mainly for password protected posts, makes them look better. */
+	text-align:center;
+	}
+
+select {
+	width: 130px;
+	}
+
+#commentform input {
+	width: 170px;
+	padding: 2px;
+	margin: 5px 5px 1px 0;
+	}
+
+#commentform textarea {
+	width: 100%;
+	padding: 2px;
+	}
+
+#commentform #submit {
+	margin: 0;
+	float: right;
+	}
+/* End Form Elements */
+
+
+
+/* Begin Comments*/
+.alt {
+	margin: 0;
+	padding: 10px;
+	}
+
+.commentlist {
+	padding: 0;
+	text-align: justify;
+	}
+
+.commentlist li {
+	margin: 15px 0 3px;
+	padding: 5px 10px 3px;
+	list-style: none;
+	}
+
+.commentlist p {
+	margin: 10px 5px 10px 0;
+	}
+
+#commentform p {
+	margin: 5px 0;
+	}
+
+.nocomments {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	}
+
+.commentmetadata {
+	margin: 0;
+	display: block;
+	}
+/* End Comments */
+
+
+
+/* Begin Sidebar */
+#sidebar
+{
+	padding: 20px 0 10px 0;
+	margin-left: 545px;
+	width: 190px;
+	}
+
+#sidebar form {
+	margin: 0;
+	}
+/* End Sidebar */
+
+
+
+/* Begin Calendar */
+#wp-calendar {
+	empty-cells: show;
+	margin: 10px auto 0;
+	width: 155px;
+	}
+
+#wp-calendar #next a {
+	padding-right: 10px;
+	text-align: right;
+	}
+
+#wp-calendar #prev a {
+	padding-left: 10px;
+	text-align: left;
+	}
+
+#wp-calendar a {
+	display: block;
+	}
+
+#wp-calendar caption {
+	text-align: center;
+	width: 100%;
+	}
+
+#wp-calendar td {
+	padding: 3px 0;
+	text-align: center;
+	}
+
+#wp-calendar td.pad:hover { /* Doesn't work in IE */
+	background-color: #fff; }
+/* End Calendar */
+
+
+
+/* Begin Various Tags & Classes */
+acronym, abbr, span.caps {
+	cursor: help;
+	}
+
+acronym, abbr {
+	border-bottom: 1px dashed #999;
+	}
+
+blockquote {
+	margin: 15px 30px 0 10px;
+	padding-left: 20px;
+	border-left: 5px solid #73a0c5;
+	}
+
+blockquote cite {
+	margin: 5px 0 0;
+	display: block;
+	}
+
+.center {
+	text-align: center;
+	}
+
+hr {
+	display: none;
+	}
+
+a img {
+	border: none;
+	}
+
+.navigation {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 60px;
+	}
+
+.related {
+	border: 1px solid #DDD;
+	padding: 5px 10px 5px 5px;
+}
+.related h3 {
+	color: #999;
+	margin: 0;
+	font-size: 1.1em;
+}
+
+.related ul {
+	font-size: 90%;
+}
+
+
+
+/* End Various Tags & Classes*/
+
+.flickr_badge_image {
+	display: inline;
+}
+
+.flickr_badge_image img {
+}
+
+.thumb {
+	padding: 4px;
+	margin: 8px;
+	border: 1px solid #ccc;
+}
+
+.thumbright {
+	padding: 4px;
+	margin: 8px 0 8px 8px;
+	border: 1px solid #ccc;
+	float: right;
+}
+
+.thumbleft {
+	padding: 4px;
+	margin: 8px 8px 8px 0;
+	border: 1px solid #ccc;
+	float: left;
+}
+
+div#profilepic_profile {
+	margin-top: 5px;
+	padding: 2px 5px;
+	color: #333;
+	background-color: #EEF;
+
+}
+
+.bluebackground {
+	margin-top: 5px;
+	padding: 2px 5px;
+	color: #333;
+	background-color: #EEF;
+
+}
+
+.blue {
+	margin-top: 5px;
+	padding: 2px 5px;
+	color: #333;
+	background-color: #EEF;
+}
+
+.red {
+	margin-top: 5px;
+	padding: 2px 5px;
+	color: #333;
+	background-color: #FEE;
+}
+
+.yellow {
+	margin-top: 5px;
+	padding: 2px 5px;
+	color: #333;
+	background-color: #FFE;
+}
+
+.green {
+	margin-top: 5px;
+	padding: 2px 5px;
+	color: #333;
+	background-color: #EFE;
+}
+
+.gray {
+	margin-top: 5px;
+	padding: 2px 5px;
+	color: #333;
+	background-color: #EEE;
+}
+
+img.sponsors {
+	margin-top: 2px;
+	padding: 5px;
+	color: #333;
+	background-color: #EEE;
+}
+
+h5.sponsors {
+	color: #CCC;
+	margin: 0;
+	text-transform: uppercase;
+	font-family: Verdana, Arial;
+        font-size: .6em;
+	font-weight: normal;
+	letter-spacing: 1px;
+}
+
+/* "Daisy, Daisy, give me your answer do. I'm half crazy all for the love of you.
+	It won't be a stylish marriage, I can't afford a carriage.
+	But you'll look sweet upon the seat of a bicycle built for two." */
